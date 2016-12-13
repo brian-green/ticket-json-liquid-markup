@@ -1,0 +1,13 @@
+{
+  "title": "{{ticket.id}}",
+  "description": "{{ticket.description}}",
+  "comments": [
+    {% for comment in ticket.comments %}
+      {
+        "created_at": "{{comment.created_at}}",
+        "author_name": "{{comment.author.name}}",
+        "value": "{{comment.value}}"
+     } 
+   {% endfor %}
+  ]
+}
